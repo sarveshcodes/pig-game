@@ -80,8 +80,8 @@ button_hold.addEventListener("click", () => {
 button_dice.addEventListener("click", () => {
   const randomno = Math.floor(Math.random() * 6) + 1;
   const dice_icon = `<i class="fas fa-dice-${num_words[randomno]} fa-2x"></i>`;
-  button_hold.disabled=false;
   setTimeout(() => {
+    button_hold.disabled=false;
     dice_score.innerHTML = dice_icon;
     dice_score.classList.toggle("rolling");
     if (randomno == 1) {
