@@ -82,6 +82,8 @@ button_dice.addEventListener("click", () => {
   const dice_icon = `<i class="fas fa-dice-${num_words[randomno]} fa-2x"></i>`;
   setTimeout(() => {
     button_hold.disabled = false;
+    button_dice.disabled = false;
+    button_new.disabled = false;
     dice_score.innerHTML = dice_icon;
     dice_score.classList.toggle("rolling");
     if (randomno == 1) {
@@ -93,6 +95,8 @@ button_dice.addEventListener("click", () => {
     }
   }, 1000);
   button_hold.disabled = true;
+  button_dice.disabled = true;
+  button_new.disabled = true;
   dice_score.innerHTML = '<i class="fas fa-stop fa-2x"></i>';
   dice_score.classList.toggle("rolling");
 });
